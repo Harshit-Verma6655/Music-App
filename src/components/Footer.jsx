@@ -68,7 +68,7 @@ export default function Footer() {
 
         {user?.token ? <Player />
         :<button className='text-blue ml-2 underline'><Link to={'/signup'}>signup here</Link></button>}
-      {added?<FavoriteIcon className='text-white' onClick={handleRemove} />: <FavoriteBorderIcon className='text-white ' onClick={handleSave}/>}
+      {added && user?.token ?<FavoriteIcon className='text-white' onClick={handleRemove} />: user?.token && <FavoriteBorderIcon className='text-white ' onClick={handleSave}/>}
        
 </div>
     </div>

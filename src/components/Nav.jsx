@@ -12,7 +12,7 @@ import { useUserContext } from '../context/UserContext';
 import searchMusic from '../api/searchMusic';
 function Nav() {
    let navigate= useNavigate();
-   let inputRef=useRef();
+   let [input, setInput]=useState();
    
    let { user,handleUser,setMusic}=useUserContext();
     let [flag, setFlag]=useState(false);
@@ -23,13 +23,18 @@ function Nav() {
     setFlag(false);
    }
    let handleSearch= async()=>{
-      
-      let data= await searchMusic(inputRef.current.value);
-      console.log("search2",data);
+      if(input){
+         navigate("/search");
+      let data= await searchMusic(input);
+      // console.log("search2",data);
       setMusic(data.data);
-      if(inputRef.current.value)
-      navigate("/search");
-      inputRef.current.value="";
+      setInput("");
+   }else{
+      return;
+   }
+
+      
+      
    }
   
   return (
@@ -55,7 +60,7 @@ function Nav() {
     <div style={{position:'absolute', right:"4px", top:"6px"}}>
       <SearchIcon style={{color:"gray"}} onClick={handleSearch}/>
       </div>
-   <input type='text' placeholder='search here' className='py-2 rounded-full pl-3 '  ref={inputRef}  />
+   <input type='text' placeholder='search here' className='py-2 rounded-full pl-3 ' value={input} onChange={(e)=>setInput(e.target.value)}  />
  </div>
 <div  >
  <AccountCircleIcon style={{color:"white", fontSize:"32px"}}   />
