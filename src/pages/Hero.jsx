@@ -30,7 +30,7 @@ useEffect(  ()=>{
 
         
     </div>
-    <button className='bg-green-500 z-20 text-white p-1 rounded mt-1  w-fit text-xs' onClick={()=>setPage(++page)}>Load More</button>
+    <button className='bg-green-500 z-20 text-white px-1 rounded mt-1  w-fit text-xs' onClick={()=>setPage(++page)}>Load More</button>
     {footer && <Footer/>}
     </div>
    
