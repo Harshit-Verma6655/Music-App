@@ -1,0 +1,14 @@
+@media(max-width:720px){
+
+    .list{
+        display: none;
+    }
+    .lines{
+        display: block;
+        color: white;
+    }
+}
+.lines{
+    display: none;
+
+}
