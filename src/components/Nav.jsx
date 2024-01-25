@@ -23,11 +23,11 @@ function Nav() {
     setFlag(false);
    }
    let handleSearch= async()=>{
-      if(input){
+      if(input.length!==0){
          navigate("/search");
-      let data= await searchMusic(input);
+       searchMusic(input).then((data)=>setMusic(data.data));
       // console.log("search2",data);
-      setMusic(data.data);
+      
       setInput("");
    }else{
       return;

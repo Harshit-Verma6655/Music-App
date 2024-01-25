@@ -7,7 +7,7 @@ export default async function searchMusic(music) {
 
 
    
-    console.log("likePost",res.data);
+    
     return res.data;
 
 

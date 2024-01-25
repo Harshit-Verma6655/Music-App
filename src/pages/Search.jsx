@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { useUserContext } from '../context/UserContext';
 export default function Search() {
     let {musicList, setMusic}=useUserContext();
-    let {user, footer,handleFooter}=useUserContext();
+    let { footer,handleFooter}=useUserContext();
 useEffect(  ()=>{
 
     musics().then((data)=>{
