@@ -10,7 +10,7 @@ export default function Post({obj,handleClick,flag}) {
     <>
     
     
-    <div className='border border-white hover:border-black transition-transform duration-100 hover:-translate-y-0.5 flex flex-col p-5 rounded-xl w-1/2 sm:w-2/5 ease-linear '>
+    <div className='border border-white hover:border-black transition-transform duration-100 hover:-translate-y-0.5 flex flex-col p-5 rounded-xl w-2/3 sm:w-2/5 ease-linear '>
 
 <div className='flex flex-col sm:flex-row self-start gap-6 items-center sm:mb-6'>
     <img className='rounded-full w-10  h-10' src={obj?.channel.image}/>

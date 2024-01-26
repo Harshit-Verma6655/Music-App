@@ -35,7 +35,7 @@ export default function Social() {
 
     },[flag]);
   return (
-    <div className='sm:mt-24 mt-48 sm:gap-9 gap-4 ' style={{display:"flex",flexDirection:"column",alignItems:"center",width:"100%",background:"rgb(43, 42, 42)",position:"absolute" }}>
+    <div className='sm:mt-24 mt-48 sm:gap-9 gap-4 min-h-full ' style={{display:"flex",flexDirection:"column",alignItems:"center",width:"100%",background:"rgb(43, 42, 42)",position:"absolute" }}>
 
 {modal && <Modal handleClick={handleClick}/>}
         <div className='text-red-700 mt-3 text-bold'>Social Posts</div>
