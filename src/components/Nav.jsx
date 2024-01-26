@@ -39,7 +39,7 @@ function Nav() {
   
   return (
  <>
- <div className='bg-black flex flex-col sm:flex-row items-center justify-around py-5 px-3 border-b  border-white w-screen fixed top-0 z-10 '>
+ <div className='bg-black flex flex-col sm:flex-row items-center justify-around py-5 sm:px-3 border-b  border-white w-screen fixed top-0 z-10 box-border '>
 
     <div className='flex justify-center mb-2'>
         <img className='w-24 h-12' src='https://cdn.dribbble.com/users/3547568/screenshots/14395014/music_jpeg.jpg'/> 

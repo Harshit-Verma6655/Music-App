@@ -18,7 +18,7 @@ console.log("ftr",footer);
 
   return (
     <>
-   <div className='flex flex-col items-center'>
+   
  <Nav/> 
 
 
@@ -33,7 +33,7 @@ console.log("ftr",footer);
       <Route path='/login' element={<Login/>}/>
       </Routes> 
       
-     </div>
+    
     </>
   )
 }
