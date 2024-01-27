@@ -24,15 +24,16 @@ useEffect(  ()=>{
 
 
     <>
-    <div className='flex flex-col items-center justify-center mt-48 sm:mt-24  absolute bg-gray-900 w-full h-screen box-border '>
+    <div className='flex flex-col items-center justify-center mt-48 sm:mt-24   bg-gray-900 w-full h-screen box-border pb-20'>
     <div className='bg-gray-900 w-full  box-border p-2 flex justify-center  flex-wrap overflow-scroll overflow-x-hidden  hero   '   >
         {musicList?.map(obj=><Card key={obj._id} obj={obj}/>)}
 
-        
+        <div className='w-full text-center'><button className='bg-green-500 z-20 text-white px-1 rounded mt-1  w-fit text-xs text-center sticky ' onClick={()=>setPage(++page)}>Load More</button></div>
     </div>
-    <button className='bg-green-500 z-20 text-white px-1 rounded mt-1  w-fit text-xs text-center' onClick={()=>setPage(++page)}>Load More</button>
+   
+    
+    </div>
     {footer && <Footer/>}
-    </div>
    
     
     
